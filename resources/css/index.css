@@ -1,0 +1,387 @@
+* {
+  box-sizing: border-box;
+}
+
+header, .bg-image, .container, .poster2, .container, footer {
+  padding: 0 30px;
+  width: 100%;
+  display: flex;
+}
+
+header, .container, .poster2, .container, footer {
+  align-items: center;
+}
+
+.intro, #logo-cont, .container, .poster2, .container, footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: auto;
+  position: relative;
+  z-index: 2;
+}
+
+h2, .info {
+  font-family: 'Assistant', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* navigation bar -----------------------------------------*/
+
+header {
+  justify-content: space-between;
+  position: fixed;
+  z-index: 6;
+  background-color: rgb(218, 208, 208);
+  height: 40px;
+}
+
+#logo-img {
+  width: 20px;
+  margin-right: 9px;
+}
+
+#logo {
+  color: black;
+  font-family: 'Kanit', sans-serif;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+.navigation {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+.navigation li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: black;
+}
+
+.button a:hover {
+  color: white;
+}
+
+strong {
+  font-weight: 900;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 4px;
+  background-color: black;
+  margin: 4px;
+}
+
+/* section intro------------------------------------------*/
+.bg-image {
+  position: fixed;
+  height: 900px;
+  background-image: url("../images/masquerade-banner.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.intro {
+  width: 100%;
+  height: 900px;
+  top: 40px;
+  padding: 35px;
+}
+
+#video {
+  position: relative;
+  height: 300px;
+  width: 500px;
+  border: 2px solid rgba(129, 120, 120, 0.3);
+  border-radius: 15px;
+  animation-name: video;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes video {
+  0%    {opacity: 0}
+  100%  {opacity: 1}
+}
+
+h2 {
+  height: 170px;
+  margin-right: 27px;
+  letter-spacing: 1px;
+  color: white;
+}
+
+#masquerade {
+  font-size: 55px;
+  animation-name: masquerade;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes masquerade {
+  0%    {opacity: 0}
+  100%  {opacity: 1}
+}
+
+#wild {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 25px;
+  line-height: 30px;
+  opacity: 0;
+  animation-name: wild;
+  animation-delay: 2s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes wild {
+  0%    {opacity: 0}
+  100%  {opacity: 1}
+}
+
+/* section poster1------------------------------------------*/
+.container {
+  padding: 10% 30px;
+  background-image: linear-gradient(rgb(16,17,21), black);
+}
+
+.img-left, .img-right {
+  width: 28%;
+  min-width: 300px;
+}
+
+.info {
+  color: rgb(255, 255, 255);
+  font-size: 1.4vw;
+  line-height: 2.2vw;
+  letter-spacing: 0.05vw;
+  text-align: justify;
+}
+
+#poster1-info {
+  width: 34%;
+}
+
+.img-animate {
+  opacity: 0;
+  transition: opacity 3.5s 0.25s ease-out;
+  will-change: opacity;
+}
+
+.img-animate.is-visible {
+  opacity: 1;
+}
+
+/* section poster2------------------------------------------*/
+.poster2 {
+  padding: 90px 60px;
+  background-color: black;
+}
+
+.image-cont {
+  width: 30%;
+}
+
+/* section poster3------------------------------------------*/
+.poster3 {
+  width: 100%;
+  position: relative;
+  background-image: linear-gradient(rgb(16,17,21), black);
+}
+
+#prevBtn, #nextBtn {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  cursor: pointer;
+  font-size: 22px;
+  color:rgba(186, 186, 192, 0.726);
+  background-color: transparent;
+  border: none;
+}
+
+#prevBtn {
+  display: none;
+  left: 2%;
+}
+
+#nextBtn {
+  right: 2%;
+}
+
+#bts {
+  background-image: linear-gradient(black, rgb(16,17,21));
+  border-top: 2px solid rgba(51, 42, 42, 0.774);
+  padding: 30px;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carousel-container {
+  width: 44%;
+  min-width: 500px;
+  border: 2px solid rgba(78, 72, 72, 0.842);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 100%;
+}
+
+/* footer section ----------------------------------------------------------*/
+
+footer {
+  height: auto;
+  background-color: rgb(218, 208, 208);
+}
+
+.soc-btn img {
+  margin: 8px 17px;
+  width: 30px;
+  height: 30px;
+}
+
+.soc-btn a:hover img {
+  filter: invert(100%);
+}
+
+#copyright {
+  margin: 8px 17px;
+  color: black;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+}
+
+/* smaller screens 1200px----------------------------------------------- */
+@media only screen and (max-width: 1200px) {
+  .carousel-container {
+    display: block;
+    width: 100%;
+    margin: 50px 15%;
+    order: 4;
+  }
+}
+
+/* smaller screens 970px----------------------------------------------- */
+@media only screen and (max-width: 970px) {
+  h2 {
+    background-image: linear-gradient(black,rgba(10,10,15, 50%));
+    width: 100%;
+    order: -1;
+    margin: 0 auto;
+  }
+  #masquerade {
+    text-align: center;
+  }
+  .info {
+    display: block;
+    font-size: 2vw;
+    line-height: 3vw;
+    letter-spacing: 0.05vw;
+    width: 100%;
+    margin: 50px 0;
+    order: 4;
+  }
+
+  #poster1-info {
+    width: 100%;
+  }
+  .img-right {
+    order: 1;
+  }
+  .image-cont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .intro, footer {
+    justify-content: center;
+  }
+  .button {
+    position: absolute;
+    padding: 20px;
+    right: 0;
+    height: 92vh;
+    width: 50%;
+    top: 40px;
+    background-color: rgb(218, 208, 208);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .button li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+/* super small screens 660px---------------------------------- */
+
+@media only screen and (max-width: 660px) {
+  .img-right {
+    order: 10;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .info {
+    font-size: 3vw;
+    line-height: 5vw;
+    letter-spacing: 0.05vw;
+  }
+
+  .carousel-container {
+    display: block;
+    width: 100%;
+    margin: 50px 0;
+  }
+}
+
+/* Menu animation--------------------------------------- */
+
+.button-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinksFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
