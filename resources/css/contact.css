@@ -3,16 +3,16 @@
 }
 
 body {
-  min-width: 470px;
+  min-width: 340px;
 }
 
 header, footer {
-  padding: 0 30px;
+  padding: 0 2%;
   width: 100%;
   display: flex;
 }
 
-header, footer {
+header, #logo-cont, footer {
   align-items: center;
 }
 
@@ -32,25 +32,26 @@ header {
   position: fixed;
   z-index: 6;
   background-color: rgb(218, 208, 208);
-  height: 40px;
+  height: 35px;
 }
 
 #logo-img {
   width: 20px;
+  height: 20px;
   margin-right: 9px;
 }
 
 #logo {
   color: black;
   font-family: 'Kanit', sans-serif;
-  font-size: 20px;
+  font-size: 1.3vw;
   letter-spacing: 5px;
 }
 
 .navigation {
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 1vw;
   letter-spacing: 3px;
 }
 
@@ -87,7 +88,7 @@ strong {
 /* main content------------------------------------------ */
 
 .content {
-  top: 40px;
+  top: 35px;
   height: 900px;
   background-image: url(../images/screens.jpeg);
   background-size: cover;
@@ -175,12 +176,17 @@ footer {
   letter-spacing: 1px;
 }
 
-/* smaller screens----------------------------------------------- */
-@media only screen and (max-width: 950px) {
+/* smaller screens 970px----------------------------------------------- */
+@media only screen and (max-width: 970px) {
   .content, footer {
     justify-content: center;
   }
-
+  #logo {
+    font-size: 2vw;
+  }
+  .navigation {
+    font-size: 1.5vw;
+  }
   .info {
     display: flex;
     flex-direction: column;
@@ -197,15 +203,15 @@ footer {
     padding: 20px;
     right: 0;
     height: 92vh;
-    width: 50%;
-    top: 40px;
+    width: 33%;
+    top: 35px;
     background-color: rgb(218, 208, 208);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     transform: translateX(100%);
-    transition: transform 0.5s ease-in;
+    transition: transform 0.2s ease-in;
   }
 
   .button li {
@@ -214,6 +220,19 @@ footer {
 
   .burger {
     display: block;
+  }
+}
+
+/* super small screens 660px---------------------------------- */
+@media only screen and (max-width: 660px) {
+  #logo {
+    font-size: 3.5vw;
+  }
+  .navigation {
+    font-size: 2.5vw;
+  }
+  #copyright {
+    font-size: 12px;
   }
 }
 

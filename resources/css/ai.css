@@ -2,13 +2,17 @@
   box-sizing: border-box;
 }
 
+body {
+  min-width: 340px;
+}
+
 header, .bg-image, .container, .poster1, .poster2, footer {
-  padding: 0 30px;
+  padding: 0 2%;
   width: 100%;
   display: flex;
 }
 
-header, .container, .poster2, footer {
+header, .container, #logo-cont, .poster2, footer {
   align-items: center;
 }
 
@@ -32,25 +36,26 @@ header {
   position: fixed;
   z-index: 6;
   background-color: rgb(218, 208, 208);
-  height: 40px;
+  height: 35px;
 }
 
 #logo-img {
   width: 20px;
+  height: 20px;
   margin-right: 9px;
 }
 
 #logo {
   color: black;
   font-family: 'Kanit', sans-serif;
-  font-size: 20px;
+  font-size: 1.3vw;
   letter-spacing: 5px;
 }
 
 .navigation {
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 1vw;
   letter-spacing: 3px;
 }
 
@@ -100,8 +105,8 @@ strong {
   z-index: 2;
   width: 100%;
   height: 900px;
-  top: 40px;
-  padding: 50px 30px;
+  top: 35px;
+  padding: 50px 2%;
 }
 
 #title-wrapper {
@@ -140,7 +145,7 @@ strong {
 /* section poster1------------------------------------------*/
 .poster1 {
   height: 700px;
-  padding: 100px 60px;
+  padding: 100px 2%;
   background-image: url("../images/mrdrone.jpg");
   background-size: cover;
   background-position: center;
@@ -162,7 +167,7 @@ strong {
   position: relative;
   z-index: 2;
   grid-template: 14% 29% 14% 29% 14% / repeat( 2, 7% 36% 7%);
-  padding: 6%;
+  padding: 6% 2%;
   background-image: url("../images/code.gif");
   background-size: cover;
   background-position: center;
@@ -217,7 +222,7 @@ strong {
   background-image: linear-gradient(rgb(16,17,21), black);
 }
 .container {
-  padding: 10% 30px;
+  padding: 10% 2%;
   background-image: linear-gradient(rgb(16,17,21), black);
 }
 
@@ -269,7 +274,6 @@ strong {
 
 .carousel-container {
   width: 44%;
-  min-width: 500px;
   border: 2px solid rgba(78, 72, 72, 0.842);
   border-radius: 10px;
   overflow: hidden;
@@ -278,6 +282,7 @@ strong {
 
 .carousel-slide {
   display: flex;
+  align-items: flex-start;
   width: 100%;
 }
 
@@ -315,18 +320,24 @@ footer {
   }
 }
 
-/* smaller screens 950px----------------------------------------------- */
-@media only screen and (max-width: 950px) {
+/* smaller screens 970px----------------------------------------------- */
+@media only screen and (max-width: 970px) {
   .poster1, footer {
     padding: 0;
     height: 100%;
     align-content: center;
     justify-content: space-around;
   }
+  #logo {
+    font-size: 2vw;
+  }
+  .navigation {
+    font-size: 1.5vw;
+  }
   .info {
     width: 80%;
     background-color: rgba(135, 139, 177, 0.795);
-    padding: 25px;
+    padding: 25px 2%;
   }
   #title-wrapper {
     width: 70%;
@@ -344,15 +355,15 @@ footer {
     padding: 20px;
     right: 0;
     height: 92vh;
-    width: 50%;
-    top: 40px;
+    width: 33%;
+    top: 35px;
     background-color: rgb(218, 208, 208);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     transform: translateX(100%);
-    transition: transform 0.5s ease-in;
+    transition: transform 0.2s ease-in;
   }
 
   .button li {
@@ -365,8 +376,13 @@ footer {
 }
 
 /* super small screens 660px---------------------------------- */
-
 @media only screen and (max-width: 660px) {
+  #logo {
+    font-size: 3.5vw;
+  }
+  .navigation {
+    font-size: 2.5vw;
+  }
   #title-wrapper {
     width: 100%;
   }
@@ -396,11 +412,13 @@ footer {
     line-height: 5vw;
     letter-spacing: 0.05vw;
   }
-
   .carousel-container {
     display: block;
     width: 100%;
     margin: 50px 0;
+  }
+  #copyright {
+    font-size: 12px;
   }
 }
 

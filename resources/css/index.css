@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  min-width: 340px;
+}
+
 header, .bg-image, .container, .poster2, .container, footer {
   padding: 0 2%;
   width: 100%;
@@ -12,7 +16,7 @@ header, .container, #logo-cont, .poster2, .container, footer {
   align-items: center;
 }
 
-.intro, #logo-cont, .container, .carousel-container, .poster2, .container, footer {
+.intro, #logo-cont, .container, .poster2, .container, footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -251,6 +255,7 @@ h2 {
 .carousel-slide {
   display: flex;
   width: 100%;
+  align-items: flex-start;
 }
 
 /* footer section ----------------------------------------------------------*/
@@ -276,7 +281,6 @@ footer {
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
-  text-align: justify;
 }
 
 /* smaller screens 1200px----------------------------------------------- */
@@ -371,7 +375,7 @@ footer {
     flex-direction: column;
   }
   .info {
-    font-size: 3.5vw;
+    font-size: 3.8vw;
     line-height: 6vw;
     letter-spacing: 0.05vw;
   }
