@@ -12,7 +12,7 @@ header, .container, #logo-cont, .poster2, .container, footer {
   align-items: center;
 }
 
-.intro, #logo-cont, .container, .poster2, .container, footer {
+.intro, #logo-cont, .container, .carousel-container, .poster2, .container, footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -100,7 +100,7 @@ strong {
 
 .intro {
   width: 100%;
-  height: 900px;
+  height: 800px;
   top: 35px;
   padding: 3%;
 }
