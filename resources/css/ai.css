@@ -6,17 +6,17 @@ body {
   min-width: 320px;
 }
 
-header, .bg-image, .container, .poster1, .poster2, footer {
+header, .bg-image, .poster1, footer {
   padding: 0 2%;
   width: 100%;
   display: flex;
 }
 
-header, .container, #logo-cont, .poster2, footer {
+header, .container, #logo-cont, .smiley, footer {
   align-items: center;
 }
 
-.info, #logo-cont, .container, .poster1, .poster2, footer {
+.info, #logo-cont, .poster1, .smiley, footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -154,86 +154,34 @@ strong {
 .info {
   width: 35%;
   color: white;
-  font-size: 18px;
+  font-size: 1.3vw;
   line-height: 28px;
   text-align: justify;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* section grid--------------------------------------------- */
-.grid {
-  display: grid;
+/* section Carousel--------------------------------------------- */
+.carousel-container {
+  padding: 0;
   width: 100%;
+  overflow: hidden;
   position: relative;
-  z-index: 2;
-  grid-template: 14% 29% 14% 29% 14% / repeat( 2, 7% 36% 7%);
-  padding: 6% 2%;
-  /* background-image: url("../images/code.gif"); */
-  background-size: cover;
-  background-position: center;
 }
 
-.img-descr {
-  position: absolute;
-  z-index: 4;
-  border: 2px solid blue;
-  border-radius: 9px;
-  padding: 0.5vw;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.3vw;
-  letter-spacing: 1px;
-  color: rgb(0, 177, 0);
-  background-color: rgba(27, 23, 3, 0.842);
+.break {
+  display: none;
+  height: 200px;
 }
 
-.chappy, .chris, .mrwilkinson, .it {
+.carousel-slide {
   display: flex;
-  justify-content: center;
-  align-self: flex-start;
-}
-
-.chappy {
-  grid-area: 1 / 2 / 4 / 3;
-  align-self: end;
-}
-
-.chris {
-  grid-area: 1 / 4 / 3 / 7;
-}
-
-.grid img {
-  border: 2px solid black;
-  opacity: 98%;
-}
-
-.mrwilkinson {
-  grid-area: 4 / 1 / 7 / 4;
-  align-self: end;
-}
-
-.it {
-  grid-area: 3 / 5 / 6 / 6;
-}
-
-/* section Poster3--------------------------------------------- */
-.poster3 {
+  align-items: flex-start;
   width: 100%;
-  position: relative;
-  background-image: linear-gradient(rgb(16,17,21), black);
-}
-.container {
-  padding: 10% 2%;
-  background-image: linear-gradient(rgb(16,17,21), black);
-}
-
-.img-left, .img-right {
-  width: 20%;
-  min-width: 200px;
 }
 
 .img-animate {
   opacity: 0;
-  transition: opacity 3.5s 0.5s ease-out;
+  transition: opacity 4s 0.5s ease-out;
   will-change: opacity;
 }
 
@@ -261,30 +209,15 @@ strong {
   right: 2%;
 }
 
-#bts {
-  background-image: linear-gradient(black, rgb(16,17,21));
-  padding: 30px;
-  color: white;
-  font-size: 20px;
-  line-height: 10vw;
-  letter-spacing: 4px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0 auto;
-  text-align: center;
+/* section Smiley ----------------------------------------- */
+.smiley {
+  justify-content: center !important;
+  height: 700px;
+  background-color: black;
 }
 
-.carousel-container {
-  width: 44%;
-  border: 2px solid rgba(78, 72, 72, 0.842);
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel-slide {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
+.smiley img {
+  width: 300px;
 }
 
 /* footer section ----------------------------------------------------------*/
@@ -311,16 +244,6 @@ footer {
   letter-spacing: 1px;
 }
 
-/* smaller screens 1200px----------------------------------------------- */
-@media only screen and (max-width: 1200px) {
-  .carousel-container {
-    display: block;
-    width: 100%;
-    margin: 50px 15%;
-    order: 4;
-  }
-}
-
 /* smaller screens 970px----------------------------------------------- */
 @media only screen and (max-width: 970px) {
   .poster1, footer {
@@ -339,6 +262,7 @@ footer {
     width: 80%;
     background-color: rgba(135, 139, 177, 0.795);
     padding: 25px 2%;
+    font-size: 2vw;
   }
   #title-wrapper {
     width: 70%;
@@ -369,20 +293,8 @@ footer {
   .button li {
     opacity: 0;
   }
-
   .burger {
     display: block;
-  }
-  .container {
-    flex-direction: column;
-  }
-  .carousel-container {
-    display: block;
-    width: 100%;
-    margin: 50px 0;
-  }
-  .img-right {
-    order: 10;
   }
 }
 
@@ -399,6 +311,9 @@ footer {
   }
   .info {
     width: 100%;
+    font-size: 3vw;
+    line-height: 5vw;
+    letter-spacing: 0.05vw;
   }
   .title {
     font-size: 6vw;
@@ -406,17 +321,6 @@ footer {
   }
   #story {
     font-size: 4vw;
-  }
-  .grid {
-    display: block;
-  }
-  .img-descr {
-    font-size: 2.5vw;
-  }
-  .info {
-    font-size: 3vw;
-    line-height: 5vw;
-    letter-spacing: 0.05vw;
   }
   #copyright {
     font-size: 12px;
