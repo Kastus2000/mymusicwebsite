@@ -6,7 +6,7 @@ body {
   min-width: 320px;
 }
 
-header, .bg-image, .container, .poster2, .container, footer {
+header, .bg-image, .poster2, footer {
   padding: 0 2%;
   width: 100%;
   display: flex;
@@ -208,6 +208,7 @@ h2 {
 .poster3 {
   width: 100%;
   position: relative;
+  border-top: 2px solid rgba(51, 42, 42, 0.774);
   background-image: linear-gradient(rgb(16,17,21), black);
 }
 
@@ -217,9 +218,9 @@ h2 {
   top: 45%;
   cursor: pointer;
   font-size: 22px;
-  color:rgba(186, 186, 192, 0.726);
-  background-color: transparent;
-  border: none;
+  color:rgba(0, 0, 0, 0.726);
+  background-color: rgba(189, 189, 196, 0.795);
+  border-radius: 20px;
 }
 
 #prevBtn {
@@ -232,23 +233,19 @@ h2 {
 }
 
 #bts {
-  background-image: linear-gradient(black, rgb(16,17,21));
-  border-top: 2px solid rgba(51, 42, 42, 0.774);
+  width: 33%;
   padding: 30px;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 10vw;
-  letter-spacing: 4px;
+  letter-spacing: 7px;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0 auto;
   text-align: center;
 }
 
 .carousel-container {
-  width: 44%;
+  width: 100%;
   min-width: 300px;
-  border: 2px solid rgba(78, 72, 72, 0.842);
-  border-radius: 10px;
   overflow: hidden;
   position: relative;
 }
@@ -260,7 +257,6 @@ h2 {
 }
 
 /* footer section ----------------------------------------------------------*/
-
 footer {
   height: auto;
   background-color: rgb(218, 208, 208);
@@ -289,7 +285,6 @@ footer {
   .carousel-container {
     display: block;
     width: 100%;
-    margin: 50px 15%;
     order: 4;
   }
 }
@@ -320,7 +315,6 @@ footer {
     margin: 50px 0;
     order: 4;
   }
-
   #poster1-info {
     width: 100%;
   }
@@ -333,11 +327,14 @@ footer {
   .carousel-container {
     display: block;
     width: 100%;
-    margin: 50px 0;
   }
   .image-cont {
     display: flex;
     flex-direction: column;
+    width: 100%;
+  }
+  #bts {
+    display: block;
     width: 100%;
   }
   .intro, footer {
