@@ -232,6 +232,11 @@ h2 {
   right: 2%;
 }
 
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 #bts {
   width: 33%;
   padding: 30px;

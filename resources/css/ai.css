@@ -209,6 +209,11 @@ strong {
   right: 2%;
 }
 
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 /* section Smiley ----------------------------------------- */
 .smiley {
   justify-content: center !important;
