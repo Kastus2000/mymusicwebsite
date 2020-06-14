@@ -20,7 +20,7 @@ header, .container, #logo-cont, .smiley, footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  overflow: scroll;
+  overflow: auto;
   position: relative;
   z-index: 2;
 }
