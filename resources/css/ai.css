@@ -6,7 +6,7 @@ body {
   min-width: 320px;
 }
 
-header, .bg-image, .poster1, footer {
+header, .bg-image, .poster1 {
   padding: 0 2%;
   width: 100%;
   display: flex;
@@ -30,13 +30,16 @@ img, p {
 }
 
 /* navigation bar -----------------------------------------*/
-
 header {
   justify-content: space-between;
   position: fixed;
   z-index: 6;
   background-color: rgb(218, 208, 208);
   height: 35px;
+}
+
+#logo-cont {
+  height: 100%;
 }
 
 #logo-img {
@@ -66,7 +69,11 @@ header {
 
 .navigation a {
   text-decoration: none;
+}
+
+.button a {
   color: black;
+  transition: 0.4s;
 }
 
 .button a:hover {
@@ -227,14 +234,17 @@ button:focus {
 
 /* footer section ----------------------------------------------------------*/
 footer {
-  height: auto;
+  padding: 1% 2%;
+  width: 100%;
+  display: flex;
   background-color: rgb(218, 208, 208);
 }
 
 .soc-btn img {
-  margin: 8px 17px;
+  margin: 0 17px;
   width: 30px;
   height: 30px;
+  transition: 0.5s;
 }
 
 .soc-btn a:hover img {
@@ -242,7 +252,7 @@ footer {
 }
 
 #copyright {
-  margin: 8px 2%;
+  margin: 0 2%;
   color: black;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
@@ -326,6 +336,9 @@ footer {
   }
   #story {
     font-size: 4vw;
+  }
+  footer {
+    padding: 4% 2%;
   }
   #copyright {
     font-size: 12px;
