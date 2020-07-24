@@ -63,27 +63,31 @@ navSlide();
 
 //carousel slide
 
-const carouselSlide = document.querySelector('.carousel-slide');
-const carouselImages = document.querySelectorAll('.carousel-slide img');
+window.onload = function() {
 
-const prevBtn = document.querySelector('#prevBtn');
-const nextBtn = document.querySelector('#nextBtn');
+  const carouselSlide = document.querySelector('.carousel-slide');
+  const carouselImages = document.querySelectorAll('.carousel-slide img');
+  
+  const prevBtn = document.querySelector('#prevBtn');
+  const nextBtn = document.querySelector('#nextBtn');
+  
+  const size = carouselImages[0].clientWidth;
+  let counter = 0;
+  
+  nextBtn.addEventListener('click', () => {
+    prevBtn.style.display = 'inline-block';
+    if (counter >= carouselImages.length - 2) nextBtn.style.display = 'none';
+    carouselSlide.style.transition = 'transform 0.4s ease-in-out';
+    counter++;
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+  });
+  
+  prevBtn.addEventListener('click', () => {
+    nextBtn.style.display = 'inline-block';
+    if (counter <= 1) prevBtn.style.display = 'none';
+    carouselSlide.style.transition = 'transform 0.4s ease-in-out';
+    counter--;
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+  });
 
-const size = carouselImages[0].clientWidth;
-let counter = 0;
-
-nextBtn.addEventListener('click', () => {
-  prevBtn.style.display = 'inline-block';
-  if (counter >= carouselImages.length - 2) nextBtn.style.display = 'none';
-  carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-  counter++;
-  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-});
-
-prevBtn.addEventListener('click', () => {
-  nextBtn.style.display = 'inline-block';
-  if (counter <= 1) prevBtn.style.display = 'none';
-  carouselSlide.style.transition = 'transform 0.4s ease-in-out';
-  counter--;
-  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-});
+};
