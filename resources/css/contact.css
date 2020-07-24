@@ -92,7 +92,7 @@ strong {
 /* main content------------------------------------------ */
 .content {
   top: 35px;
-  height: 900px;
+  height: 100vh;
   background-image: url(../images/screens.jpeg);
   background-size: cover;
   background-position: center;
